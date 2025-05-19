@@ -21,6 +21,3 @@ function syncScroll(source, target) {
 
 tableBody.addEventListener("scroll", () => syncScroll(tableBody, tableHead));
 tableHead.addEventListener("scroll", () => syncScroll(tableHead, tableBody));
-
-tableBody.addEventListener("touchmove", () => syncScroll(tableBody, tableHead));
-tableHead.addEventListener("touchmove", () => syncScroll(tableHead, tableBody));

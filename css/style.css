@@ -1590,6 +1590,21 @@ p {
 .recomendation-page .profiles .table__body .table__cell {
   background: #000000;
 }
+.recomendation-page .profiles .table__head,
+.recomendation-page .profiles .table__body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+@media (pointer: coarse) {
+  .recomendation-page .profiles .table__head,
+  .recomendation-page .profiles .table__body {
+    scroll-snap-type: x mandatory;
+  }
+  .recomendation-page .profiles .table__row {
+    scroll-snap-align: start;
+  }
+}
 @media (width >= 425px) {
   .recomendation-page .profiles .table {
     font-size: 18px;
