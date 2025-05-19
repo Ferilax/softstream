@@ -1,0 +1,419 @@
+.functionality-page {
+
+	main {
+		background: url("../img/gradients/gradient-4.png") top center / 100% no-repeat;
+
+		@media (width >=768px) {
+			background:
+				url("../img/gradients/gradient-3.png") bottom -100px right -200px / 800px no-repeat,
+				url("../img/gradients/gradient-2.png") top center / 100% no-repeat;
+		}
+
+		@media (width >=1024px) {
+			background:
+				url("../img/gradients/gradient-3.png") bottom -100px right -200px / 800px no-repeat,
+				url("../img/gradients/gradient-2.png") top center / 100% no-repeat;
+		}
+	}
+
+	.start {
+		padding-top: 40px;
+
+		.bold {
+			display: inline;
+		}
+
+		.title {
+			@extend %h1;
+			max-width: 885px;
+		}
+
+		.subtitle {
+			@extend %subtitle-small;
+			margin-top: 40px;
+
+			max-width: 1112px;
+		}
+
+		.list-title {
+			@extend %subtitle-small;
+			margin-top: 24px;
+
+			max-width: 1112px;
+		}
+
+		.component_list {
+			margin-top: 24px;
+		}
+
+		@media (width >=1024px) {
+			.list-title {
+				margin-top: 32px;
+			}
+
+			.component_list {
+				margin-top: 32px;
+			}
+		}
+
+		@media (width >=1440px) {
+			padding-top: 60px;
+
+			.bold {
+				font-weight: 800;
+			}
+
+			.list-title {
+				margin-top: 40px;
+			}
+
+			.component_list {
+				margin-top: 40px;
+			}
+
+			.subtitle {
+				margin-top: 60px;
+			}
+		}
+	}
+
+	.algorithm {
+		padding-top: 120px;
+
+		.title {
+			@extend %subtitle;
+		}
+
+		.desk-outher {
+			margin-top: 40px;
+			padding: 1px;
+			background: linear-gradient(135deg, #BB6153, #000000);
+			border-radius: 24px;
+
+			max-width: 600px;
+		}
+
+		.desk-inner {
+			padding: 20px;
+			background: linear-gradient(to right, #171717, #210103);
+			border-radius: inherit;
+
+			position: relative;
+
+			line-height: 1.2;
+			font-size: 14px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		span {
+
+
+			&.first {
+				margin-bottom: 20px;
+			}
+
+			&.second {
+				position: absolute;
+				top: 48%;
+				left: 20px;
+				max-width: 62%;
+			}
+
+			&.third {
+				margin-top: 22px;
+			}
+		}
+
+		@media (width < 768px) {
+			.title {
+				font-size: 18px;
+			}
+		}
+
+		@media (width >=425px) {
+			.desk-inner {
+				font-size: 16px;
+			}
+		}
+
+		@media (width >=768px) {
+			.desk-inner {
+				font-size: 18px;
+			}
+		}
+
+		@media (width >=1024px) {
+			.desk-outher {
+				max-width: unset;
+			}
+
+			.desk-inner {
+				padding: 0;
+			}
+
+			span {
+				max-width: 370px;
+				padding-right: 20px;
+
+				position: absolute;
+
+				&.first {
+					margin: 0;
+
+					top: 24%;
+					left: 20%;
+				}
+
+				&.second {
+					max-width: 370px;
+					padding-right: 40px;
+					top: 73%;
+					left: 36%;
+				}
+
+				&.third {
+					margin: 0;
+					top: 55%;
+					left: 71%;
+				}
+			}
+		}
+
+		@media (width >=1440px) {
+			.desk-outher {
+				margin-top: 60px;
+			}
+
+			.desk-inner {
+				font-size: 20px;
+			}
+
+			span {
+				padding: 0;
+
+				&.second {
+					padding: 0;
+				}
+			}
+		}
+	}
+
+	.requirements {
+		padding-top: 120px;
+		--text: 16px;
+		--margin: 24px;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 2000px;
+			z-index: -10;
+
+			pointer-events: none;
+		}
+
+		@media (width >=768px) {
+			&::after {
+				background: url("../img/gradients/gradient-7.png") left center / 600px no-repeat;
+			}
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			gap: 120px;
+		}
+
+		.title {
+			@extend %subtitle;
+			max-width: 580px;
+		}
+
+		.text {
+			max-width: 980px;
+		}
+
+		.text,
+		.list-postscript {
+			margin-top: var(--margin);
+			font-weight: 600;
+			line-height: 1.2;
+			font-size: var(--text);
+		}
+
+		.list-title {
+			margin-top: 20px;
+			font-weight: 600;
+			font-size: var(--text);
+		}
+
+		.component_list {
+			margin-top: var(--margin);
+			max-width: unset;
+		}
+
+		@media (width >=768px) {
+			--text: 20px;
+		}
+
+		@media (width >=1024px) {
+			--text: 22px;
+			--margin: 32px;
+
+			padding-top: 160px;
+
+			.list-title {
+				margin-top: var(--margin);
+			}
+		}
+
+		@media (width >=1440px) {
+			--text: 24px;
+			--margin: 40px;
+			padding-top: 257px;
+
+			.component_list__item {
+				&:first-child {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+
+	.sliders {
+		padding-top: 120px;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			gap: 120px;
+		}
+
+		.title {
+			@extend %subtitle;
+		}
+
+		.text {
+			font-weight: 600;
+		}
+
+		.group {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+		}
+
+		.card {
+			background: linear-gradient(135deg, #BB6153, #000000);
+			padding: 1px;
+			border-radius: 24px;
+		}
+
+		.card-body {
+			background: linear-gradient(to right, #171717, #210103);
+			height: 100%;
+			border-radius: inherit;
+		}
+
+		@media (width >=768px) {
+			.text {
+				font-size: 20px;
+			}
+		}
+
+		@media (width >=1023px) {
+			.text {
+				font-size: 22px;
+			}
+		}
+
+		@media (width >=1440px) {
+			.text {
+				font-size: 24px;
+			}
+		}
+	}
+
+	.actions {
+		padding: 120px 0;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			gap: 120px;
+		}
+
+		.group {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			max-width: 900px
+		}
+
+		.title {
+			@extend %subtitle;
+		}
+
+		.button {
+			@extend %button-big;
+		}
+
+		@media (width < 768px) {
+			.title {
+				font-size: 18px;
+			}
+		}
+
+		@media (width >=768px) {
+			.button {
+				align-self: start;
+			}
+		}
+
+		@media (width >=1024px) {
+			.group {
+				gap: 32px;
+			}
+		}
+
+		@media (width >=1440px) {
+			.group {
+				gap: 40px;
+			}
+		}
+	}
+}
+
+#admin-panel-splide {
+	.splide__track {
+		margin: 0 calc((100vw - 100%) / -2);
+	}
+
+	.card {
+		height: 393px;
+	}
+}
+
+#certificates-splide {
+	.splide__track {
+		margin: 0 calc((100vw - 100%) / -2);
+	}
+
+	.card {
+		height: 393px;
+	}
+
+	@media (width >=1440px) {
+		.card {
+			height: 571px;
+		}
+	}
+}

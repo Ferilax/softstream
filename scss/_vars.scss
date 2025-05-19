@@ -1,0 +1,19 @@
+:root {
+	--header-height: 74px;
+	--container-padding: 28px;
+
+	--z-header: 100;
+	--z-mobile-menu: 90;
+
+	@media (width >=768px) {
+		--header-height: 94px;
+	}
+
+	@media (width >=1440px) {
+		--container-padding: 40px;
+	}
+
+	@media (width >=1440px) {
+		--header-height: 80px;
+	}
+}

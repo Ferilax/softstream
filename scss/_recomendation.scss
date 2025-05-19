@@ -1,0 +1,309 @@
+.recomendation-page {
+	main {
+		background:
+			url("../img/gradients/gradient-4.png") top center / 100% no-repeat;
+
+
+		@media (width >=768px) {
+			background:
+				url("../img/gradients/gradient-2.png") top center / 100% no-repeat;
+		}
+	}
+
+	.for-who {
+		.title {
+			margin-top: 40px;
+			@extend %h1;
+
+			max-width: 1055px;
+		}
+
+		.list {
+			margin-top: 60px;
+
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			max-width: 886px;
+		}
+
+		.article {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			gap: 18px;
+
+			padding-bottom: 20px;
+			border-bottom: 2px solid #171717;
+			line-height: 1.2;
+		}
+
+		.article__title {
+			font-weight: 600;
+			font-size: 20px;
+		}
+
+		.article__text {
+			font-size: 18px;
+		}
+
+		@media (width >=768px) {
+			.article__title {
+				font-size: 22px;
+			}
+
+			.article__text {
+				font-size: 20px;
+				line-height: 1.3;
+			}
+		}
+
+		@media (width >=1024px) {
+			.article__title {
+				font-size: 24px;
+			}
+
+			.article__text {
+				font-size: 22px;
+			}
+		}
+
+		@media (width >=1440px) {
+			.title {
+				margin-top: 60px;
+			}
+		}
+	}
+
+	.profiles {
+		margin-top: 40px;
+		position: relative;
+		z-index: -2;
+
+		%grid {
+			display: grid;
+			grid-template-columns: repeat(5, minmax(232px, 336px));
+			overflow-y: auto;
+
+			scrollbar-width: none !important;
+			-ms-overflow-style: none;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		.title {
+			@extend %subtitle-small;
+			max-width: 964px;
+		}
+
+		.table {
+			margin-top: 46px;
+			line-height: 1.2;
+		}
+
+		.table__head {
+			@extend %grid;
+			background: #171717;
+			border-radius: 24px 24px 0 0;
+
+			span {
+				margin-top: 10px;
+			}
+		}
+
+		.table__cell {
+			padding: 20px;
+			font-weight: 600;
+		}
+
+		.table__cell.first {
+			padding-left: 0;
+		}
+
+		.table__body {
+			@extend %grid;
+
+			gap: 1px;
+			background: #FFFFFF33;
+
+			.table__cell {
+				background: #000000;
+			}
+		}
+
+		@media (width >=425px) {
+			.table {
+				font-size: 18px;
+			}
+		}
+
+		@media (width >=768px) {
+			.table {
+				font-size: 20px;
+			}
+		}
+
+		@media (width >=1024px) {
+			.table {
+				font-size: 22px;
+			}
+		}
+
+		@media (width >=1440px) {
+			.table {
+				font-size: 24px;
+			}
+		}
+	}
+
+	.quote {
+		padding-top: 115px;
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.body {
+			max-width: 1420px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 1.2;
+			text-align: center;
+
+			padding: 32px 20px;
+
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				width: 100vw;
+				height: 1000px;
+				background: url("../img/gradients/gradient-6.png") center / 2000px no-repeat;
+				z-index: -1;
+				pointer-events: none;
+			}
+		}
+
+		.mark-open {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.mark-close {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+		@media (width >=425px) {
+			.body {
+				font-size: 31px;
+			}
+		}
+
+		@media (width >=768px) {
+			.body {
+				font-size: 42px;
+
+				&::after {
+					background-size: 1400px;
+				}
+			}
+
+			.mark-close,
+			.mark-open {
+				width: 35px;
+				height: 35px;
+			}
+		}
+
+		@media (width >=1024px) {
+			.body {
+				font-weight: 500;
+				font-size: 53px;
+
+			}
+		}
+
+		@media (width >=1440px) {
+			padding-top: 147px;
+
+			.body {
+				font-size: 64px;
+				padding: 46px;
+
+				&::after {
+					background-size: 100%;
+				}
+			}
+
+			.mark-close,
+			.mark-open {
+				width: 45px;
+				height: 45px;
+			}
+		}
+	}
+
+	.aditional-info {
+		padding-top: 115px;
+		padding-bottom: 100px;
+
+		.title {
+			@extend %subtitle-small;
+		}
+
+		.body {
+			max-width: 686px;
+		}
+
+		.buttons {
+			margin-top: 40px;
+			display: flex;
+			gap: 20px;
+			flex-direction: column;
+		}
+
+		br {
+			display: none;
+		}
+
+		.button {
+			@extend %button-big;
+		}
+
+		@media (width < 768px) {
+			.button {
+				padding: 0;
+			}
+		}
+
+		@media (width < 1024px) {
+			.title {
+				font-size: 24px;
+			}
+		}
+
+		@media (width >=768px) {
+			.buttons {
+				flex-direction: row;
+			}
+		}
+
+		@media (width >=1440px) {
+			br {
+				display: block;
+			}
+		}
+	}
+}

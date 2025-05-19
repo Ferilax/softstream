@@ -1,0 +1,72 @@
+.soft-stream-shield-page {
+	main {
+		background:
+			url("../img/demo-gradient-mobile.png") bottom -100px right / 80% no-repeat,
+			url("../img/gradients/gradient-4.png") top center / 100% no-repeat;
+
+
+		@media (width >=768px) {
+			background:
+				url("../img/demo-gradient-mobile.png") bottom -100px right / 80% no-repeat,
+				url("../img/gradients/gradient-2.png") top center / 100% no-repeat;
+		}
+
+		@media (width >=1024px) {
+			background:
+				url("../img/gradients/gradient-3.png") bottom -300px right / 900px no-repeat,
+				url("../img/gradients/gradient-2.png") top center / 100% no-repeat;
+		}
+	}
+
+	.lists {
+		padding-top: 40px;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+		}
+
+		.list-title {
+			@extend %subtitle-small;
+			border-bottom: 2px solid #171717;
+
+			padding-bottom: 10px;
+		}
+
+		.list-item {
+			&:nth-child(2) {
+				margin-top: -10px;
+			}
+		}
+
+		.bold {
+			font-weight: 700;
+		}
+
+		@media (width >=768px) {}
+
+		@media (width >=1024px) {
+
+			.component_list {
+				padding: 18px 0;
+				gap: 24px;
+			}
+		}
+
+		@media (width >=1440px) {
+			.list-title {
+				padding-bottom: 24px;
+			}
+		}
+	}
+
+	.section-demo {
+		@media (width >=1024px) {
+			.content {
+				gap: 40px;
+				flex: 0 1 1115px;
+			}
+		}
+	}
+}

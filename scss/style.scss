@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import "nullstyle";
+@import "vars";
+@import "templates";
+
+@import "header";
+@import "footer";
+
+@import "main";
+@import "article";
+@import "soft-stream";
+@import "soft-stream-shield";
+@import "recomendation";
+@import "advantages";
+@import "functionality";
+
+body {
+	font-family: Manrope;
+	scroll-behavior: smooth;
+	background: #010000;
+	color: white;
+
+	@media (width < 1024px) {
+
+		&.lock {
+			overflow: hidden;
+		}
+	}
+}
+
+main {
+	padding-top: var(--header-height);
+}
+
+.container {
+	max-width: 1760px; //1680
+	margin: 0 auto;
+	padding: 0 var(--container-padding);
+}

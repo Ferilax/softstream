@@ -1,0 +1,63 @@
+.advantages-page {
+	main {
+		background:
+			url("../img/demo-gradient-mobile.png") bottom -100px right / 80% no-repeat,
+			url("../img/gradients/gradient-4.png") top center / 100% no-repeat;
+
+
+		@media (width >=768px) {
+			background:
+				url("../img/demo-gradient-mobile.png") bottom -100px right / 80% no-repeat,
+				url("../img/gradients/gradient-2.png") top center / 100% no-repeat;
+		}
+
+		@media (width >=1024px) {
+			background:
+				url("../img/gradients/gradient-3.png") bottom -500px right / 900px no-repeat,
+				url("../img/gradients/gradient-2.png") top center / 100% no-repeat;
+		}
+	}
+
+	.lists {
+		padding-top: 60px;
+
+		.button {
+			@extend %button-big;
+			margin-top: 24px;
+		}
+
+		@media (width >=768px) {
+			.button {
+				width: max-content;
+				margin-top: 32px;
+			}
+		}
+
+		@media (width >=1024px) {
+			.button {
+				margin-top: 42px;
+			}
+		}
+
+		@media (width >=1440px) {
+			.button {
+				margin-top: 58px;
+			}
+		}
+	}
+
+	.section-demo {
+
+		@media (width >=1024px) {
+			padding-top: 50px;
+
+			.content {
+				flex: 0 1 837px;
+			}
+		}
+
+		@media (width >=1440px) {
+			padding-top: 0;
+		}
+	}
+}

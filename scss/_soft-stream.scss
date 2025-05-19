@@ -1,0 +1,68 @@
+.soft-stream-page {
+	main {
+		background:
+			url("../img/demo-gradient-mobile.png") bottom -100px right / 80% no-repeat,
+			url("../img/gradients/gradient-1.png") top left / 1000px no-repeat;
+
+		@media (width >=768px) {
+			background:
+				url("../img/demo-gradient-mobile.png") bottom -100px right / 50% no-repeat,
+				url("../img/gradients/gradient-1.png") top left / 1000px no-repeat;
+		}
+
+		@media (width >=1024px) {
+			background:
+				url("../img/gradients/gradient-5.png") bottom -300px right / 900px no-repeat,
+				url("../img/gradients/gradient-1.png") top left / 800px no-repeat;
+		}
+	}
+
+	.soft-stream {
+		padding-top: 40px;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			display: grid;
+			grid-template-columns: minmax(auto, 974px);
+		}
+
+		.title {
+			@extend %h1;
+		}
+
+		.text {
+			@extend %subtitle-small;
+		}
+
+		.group {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			margin-top: 36px;
+		}
+
+		.button {
+			@extend %button-big;
+		}
+
+		@media (width >=768px) {
+			.button {
+				align-self: start;
+			}
+		}
+
+		@media (width >=1440px) {
+			.container {
+				gap: 60px;
+			}
+
+			.group {
+				margin: 0;
+			}
+		}
+	}
+}
