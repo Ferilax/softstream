@@ -132,25 +132,6 @@
 			}
 		}
 
-		.table__head,
-		.table__body {
-			-webkit-overflow-scrolling: touch;
-			overflow-x: auto;
-			overscroll-behavior-x: contain;
-		}
-
-		@media (pointer: coarse) {
-
-			.table__head,
-			.table__body {
-				scroll-snap-type: x mandatory;
-			}
-
-			.table__row {
-				scroll-snap-align: start;
-			}
-		}
-
 		@media (width >=425px) {
 			.table {
 				font-size: 18px;

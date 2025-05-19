@@ -860,15 +860,15 @@ p {
   display: flex;
   flex-direction: column;
 }
+.main-page .start .full-width {
+  width: 100%;
+}
 .main-page .start .flex {
   display: flex;
   justify-content: space-between;
 }
 .main-page .start .title {
   max-width: 770px;
-}
-.main-page .start .pagination {
-  margin-top: 126px;
 }
 .main-page .start .messages {
   margin-top: 24px;
@@ -1113,7 +1113,7 @@ p {
   position: static;
   padding: 0;
   gap: 4px;
-  padding: 0 var(--container-padding);
+  padding: 0;
 }
 #start-splide li {
   display: flex;
@@ -1147,6 +1147,11 @@ p {
 }
 #start-splide .splide__pagination__page.is-active::after {
   transform: translate(-50%, -50%);
+}
+@media (width >= 768px) {
+  #start-splide .splide__pagination {
+    justify-content: start;
+  }
 }
 @media (width >= 1440px) {
   #start-splide {
@@ -1589,21 +1594,6 @@ p {
 }
 .recomendation-page .profiles .table__body .table__cell {
   background: #000000;
-}
-.recomendation-page .profiles .table__head,
-.recomendation-page .profiles .table__body {
-  -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-}
-@media (pointer: coarse) {
-  .recomendation-page .profiles .table__head,
-  .recomendation-page .profiles .table__body {
-    scroll-snap-type: x mandatory;
-  }
-  .recomendation-page .profiles .table__row {
-    scroll-snap-align: start;
-  }
 }
 @media (width >= 425px) {
   .recomendation-page .profiles .table {

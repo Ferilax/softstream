@@ -36,7 +36,11 @@
 
 		.content {
 			display: flex;
-			flex-direction: column
+			flex-direction: column;
+		}
+
+		.full-width {
+			width: 100%;
 		}
 
 		.flex {
@@ -51,10 +55,6 @@
 
 		.subtitle {
 			@extend %subtitle-small;
-		}
-
-		.pagination {
-			margin-top: 126px;
 		}
 
 		.messages {
@@ -343,7 +343,7 @@
 		position: static;
 		padding: 0;
 		gap: 4px;
-		padding: 0 var(--container-padding);
+		padding: 0;
 	}
 
 	li {
@@ -381,6 +381,12 @@
 			&::after {
 				transform: translate(-50%, -50%);
 			}
+		}
+	}
+
+	@media (width >=768px) {
+		.splide__pagination {
+			justify-content: start;
 		}
 	}
 
