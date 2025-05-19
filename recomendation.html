@@ -16,7 +16,7 @@
 				<img src="img/logo.png" alt="">
 			</a>
 
-			<a href="tel:" class="tel-mobile">
+			<a href="tel:+78005051042" class="tel-mobile">
 				<img src="img/icons/phone.svg" alt="">
 			</a>
 
@@ -102,7 +102,7 @@
 			<div class="buttons">
 				<div class="tel">+7 800 505 10 42</div>
 				<button class="button">Поддержка</button>
-				<button class="button">Заказать Демо-образец</button>
+				<button class="button modal-demo-trigger">Заказать Демо-образец</button>
 			</div>
 
 			<button class="mobile-menu-trigger">
@@ -171,7 +171,7 @@
 
 			<div class="buttons">
 				<button class="button">Поддержка</button>
-				<button class="button">Заказать Демо-образец</button>
+				<button class="button modal-demo-trigger">Заказать Демо-образец</button>
 			</div>
 		</div>
 	</section>
@@ -236,44 +236,41 @@
 				</h2>
 
 				<section class="table">
-					<div class="table__head">
-						<div class="table__cell"></div>
-						<div class="table__cell">
-							<img src="img/icons/router.svg" alt="">
-							<span>Интернет-провайдеры и телеком-операторы</span>
-						</div>
-						<div class="table__cell">
-							<img src="img/icons/purse.svg" alt="">
-							<span>Банки / Финансовые организации / Брокеры</span>
-						</div>
-						<div class="table__cell">
-							<img src="img/icons/gamepad.svg" alt="">
-							<span>Операторы сетевых игр и стриминг-сервисы</span>
-						</div>
-						<div class="table__cell">
-							<img src="img/icons/basket.svg" alt="">
-							<span>Интернет-магазины, компании с сервисами в Интернет</span>
-						</div>
+					<div class="table__cell head"></div>
+					<div class="table__cell head">
+						<img src="img/icons/router.svg" alt="">
+						<span>Интернет-провайдеры и телеком-операторы</span>
 					</div>
-					<div class="table__body">
-						<span class="table__cell first">API-интерфейсы</span>
-						<span class="table__cell">Enterprise 200</span>
-						<span class="table__cell">Enterprise 200</span>
-						<span class="table__cell">Enterprise 200</span>
-						<span class="table__cell">Enterprise 100</span>
-
-						<span class="table__cell first">Удалённые соединения</span>
-						<span class="table__cell">Enterprise 200</span>
-						<span class="table__cell">Enterprise 100</span>
-						<span class="table__cell">Enterprise 200</span>
-						<span class="table__cell">Enterprise 100</span>
-
-						<span class="table__cell first">Корпоративные информационные системы</span>
-						<span class="table__cell"></span>
-						<span class="table__cell">Enterprise 200</span>
-						<span class="table__cell"></span>
-						<span class="table__cell">Enterprise 100</span>
+					<div class="table__cell head">
+						<img src="img/icons/purse.svg" alt="">
+						<span>Банки / Финансовые организации / Брокеры</span>
 					</div>
+					<div class="table__cell head">
+						<img src="img/icons/gamepad.svg" alt="">
+						<span>Операторы сетевых игр и стриминг-сервисы</span>
+					</div>
+					<div class="table__cell head">
+						<img src="img/icons/basket.svg" alt="">
+						<span>Интернет-магазины, компании с сервисами в Интернет</span>
+					</div>
+
+					<span class="table__cell">API-интерфейсы</span>
+					<span class="table__cell">Enterprise 200</span>
+					<span class="table__cell">Enterprise 200</span>
+					<span class="table__cell">Enterprise 200</span>
+					<span class="table__cell">Enterprise 100</span>
+
+					<span class="table__cell">Удалённые соединения</span>
+					<span class="table__cell">Enterprise 200</span>
+					<span class="table__cell">Enterprise 100</span>
+					<span class="table__cell">Enterprise 200</span>
+					<span class="table__cell">Enterprise 100</span>
+
+					<span class="table__cell">Корпоративные информационные системы</span>
+					<span class="table__cell"></span>
+					<span class="table__cell">Enterprise 200</span>
+					<span class="table__cell"></span>
+					<span class="table__cell">Enterprise 100</span>
 				</section>
 			</div>
 		</section>
@@ -306,7 +303,7 @@
 					</h2>
 					<div class="buttons">
 						<a href="advantages.html" class="button">Узнать больше о преимуществах</a>
-						<button class="button">Заказать "демо режим"</button>
+						<button class="button modal-demo-trigger">Заказать "демо режим"</button>
 					</div>
 				</div>
 			</div>
@@ -384,10 +381,61 @@
 		</div>
 	</footer>
 
+	<section class="modal" id="modal-demo">
+		<div class="modal__body">
+			<div class="modal__content">
+				<div class="modal__head">
+					<h3 class="title">Готовы заказать <br> демо-образец?</h3>
+					<button class="modal__close">
+						<img src="img/icons/close.svg" alt="">
+					</button>
+				</div>
+
+				<p class="text">
+					Оставьте ваши координаты и мы перезвоним вам и договоримся о времени презентации
+				</p>
+
+				<form action="#" autocomplete="off" class="form">
+					<input type="text" placeholder="Имя Фамилия" required>
+					<input type="tel" inputmode="tel" placeholder="Телефон" required>
+					<input type="text" placeholder="Название организации" required>
+					<input type="email" inputmode="email" placeholder="Е-мэйл" required>
+					<button class="submit modal-submit-trigger">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="modal" id="modal-submit">
+		<div class="modal__body">
+			<div class="modal__content">
+				<div class="modal__head">
+					<img class="logo" src="img/logo.png" alt="">
+					<button class="modal__close">
+						<img src="img/icons/close.svg" alt="">
+					</button>
+				</div>
+
+				<h3 class="title">Ваши контактные <br> данные отправлены </h3>
+
+				<div class="text">
+					<p>
+						Мы свяжемся с вами в ближайшее время, чтобы уточнить детали получения демо-образца.
+					</p>
+					<p>
+						Он будет доступен вам после презентации на срок до 14 дней для оценки возможностей комплекса SoftStream
+						Shield
+					</p>
+				</div>
+
+				<button class="close">Закрыть</button>
+			</div>
+		</div>
+	</section>
 
 	<script src="js/header.js"></script>
-	<script src="js/recomendation.js"></script>
 	<script src="js/accordeons.js"></script>
+	<script src="js/modal.js"></script>
 </body>
 
 </html>

@@ -16,7 +16,7 @@
 				<img src="img/logo.png" alt="">
 			</a>
 
-			<a href="tel:" class="tel-mobile">
+			<a href="tel:+78005051042" class="tel-mobile">
 				<img src="img/icons/phone.svg" alt="">
 			</a>
 
@@ -102,7 +102,7 @@
 			<div class="buttons">
 				<div class="tel">+7 800 505 10 42</div>
 				<button class="button">Поддержка</button>
-				<button class="button">Заказать Демо-образец</button>
+				<button class="button modal-demo-trigger">Заказать Демо-образец</button>
 			</div>
 
 			<button class="mobile-menu-trigger">
@@ -171,7 +171,7 @@
 
 			<div class="buttons">
 				<button class="button">Поддержка</button>
-				<button class="button">Заказать Демо-образец</button>
+				<button class="button modal-demo-trigger">Заказать Демо-образец</button>
 			</div>
 		</div>
 	</section>
@@ -249,7 +249,7 @@
 					<h3 class="subtitle">
 						Получите индивидуальную консультацию вместе с демонстрационным периодом до 14 дней
 					</h3>
-					<button class="button">Заказать Демо-образец</button>
+					<button class="button modal-demo-trigger">Заказать Демо-образец</button>
 				</div>
 
 				<div class="image desktop">
@@ -329,8 +329,62 @@
 			</p>
 		</div>
 	</footer>
+
+	<section class="modal" id="modal-demo">
+		<div class="modal__body">
+			<div class="modal__content">
+				<div class="modal__head">
+					<h3 class="title">Готовы заказать <br> демо-образец?</h3>
+					<button class="modal__close">
+						<img src="img/icons/close.svg" alt="">
+					</button>
+				</div>
+
+				<p class="text">
+					Оставьте ваши координаты и мы перезвоним вам и договоримся о времени презентации
+				</p>
+
+				<form action="#" autocomplete="off" class="form">
+					<input type="text" placeholder="Имя Фамилия" required>
+					<input type="tel" inputmode="tel" placeholder="Телефон" required>
+					<input type="text" placeholder="Название организации" required>
+					<input type="email" inputmode="email" placeholder="Е-мэйл" required>
+					<button class="submit modal-submit-trigger">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="modal" id="modal-submit">
+		<div class="modal__body">
+			<div class="modal__content">
+				<div class="modal__head">
+					<img class="logo" src="img/logo.png" alt="">
+					<button class="modal__close">
+						<img src="img/icons/close.svg" alt="">
+					</button>
+				</div>
+
+				<h3 class="title">Ваши контактные <br> данные отправлены </h3>
+
+				<div class="text">
+					<p>
+						Мы свяжемся с вами в ближайшее время, чтобы уточнить детали получения демо-образца.
+					</p>
+					<p>
+						Он будет доступен вам после презентации на срок до 14 дней для оценки возможностей комплекса SoftStream
+						Shield
+					</p>
+				</div>
+
+				<button class="close">Закрыть</button>
+			</div>
+		</div>
+	</section>
+
 	<script src="js/header.js"></script>
 	<script src="js/accordeons.js"></script>
+	<script src="js/modal.js"></script>
 </body>
 
 </html>

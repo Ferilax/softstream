@@ -100,35 +100,45 @@
 		.table {
 			margin-top: 46px;
 			line-height: 1.2;
-		}
 
-		.table__head {
 			@extend %grid;
-			background: #171717;
-			border-radius: 24px 24px 0 0;
-
-			span {
-				margin-top: 10px;
-			}
 		}
 
 		.table__cell {
+			&:nth-child(-n + 5) {
+				background: #171717;
+
+				span {
+					margin-top: 10px;
+				}
+			}
+
+			&:nth-child(1) {
+				border-top-left-radius: 24px;
+			}
+
+			&:nth-child(5) {
+				border-top-right-radius: 24px;
+			}
+
 			padding: 20px;
 			font-weight: 600;
-		}
 
-		.table__cell.first {
-			padding-left: 0;
-		}
+			&:nth-child(n + 6) {
+				border-right: 1px solid #FFFFFF33;
+				border-bottom: 1px solid #FFFFFF33;
+			}
 
-		.table__body {
-			@extend %grid;
+			&:nth-child(5n + 6) {
+				padding-left: 0;
+			}
 
-			gap: 1px;
-			background: #FFFFFF33;
+			&:nth-child(5n + 10) {
+				border-right: none;
+			}
 
-			.table__cell {
-				background: #000000;
+			&:nth-last-child(-n + 5) {
+				border-bottom: none;
 			}
 		}
 

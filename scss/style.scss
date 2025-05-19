@@ -15,6 +15,12 @@
 @import "advantages";
 @import "functionality";
 
+@property --border-angle {
+	syntax: "<angle>";
+	inherits: true;
+	initial-value: 0turn;
+}
+
 body {
 	font-family: Manrope;
 	scroll-behavior: smooth;
