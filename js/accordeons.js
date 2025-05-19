@@ -13,7 +13,7 @@ setZeroHeight();
 
 function accordeonClose(accordeon, accordeonAnswer) {
 	accordeonAnswer.style.height = `${accordeonAnswer.scrollHeight}px`;
-	accordeonAnswer.style.pointerEvents = "unset";
+	//accordeonAnswer.style.pointerEvents = "unset";
 	accordeon.classList.add("open");
 }
 
@@ -21,7 +21,7 @@ function accordeonOpen(accordeon, accordeonAnswer) {
 	accordeonAnswer.style.height = `${accordeonAnswer.scrollHeight}px`;
 	window.getComputedStyle(accordeonAnswer, null).getPropertyValue("height");
 	accordeonAnswer.style.height = "0";
-	accordeonAnswer.style.pointerEvents = "none";
+	//accordeonAnswer.style.pointerEvents = "none";
 	accordeon.classList.remove("open");
 }
 
