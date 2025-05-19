@@ -1551,8 +1551,6 @@ p {
 }
 .recomendation-page .profiles {
   margin-top: 40px;
-  position: relative;
-  z-index: -2;
 }
 .recomendation-page .profiles .table__body, .recomendation-page .profiles .table__head {
   display: grid;
@@ -1613,6 +1611,8 @@ p {
   }
 }
 .recomendation-page .quote {
+  position: relative;
+  z-index: 1;
   padding-top: 115px;
 }
 .recomendation-page .quote .container {

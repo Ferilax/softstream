@@ -78,8 +78,6 @@
 
 	.profiles {
 		margin-top: 40px;
-		position: relative;
-		z-index: -2;
 
 		%grid {
 			display: grid;
@@ -160,6 +158,8 @@
 	}
 
 	.quote {
+		position: relative;
+		z-index: 1;
 		padding-top: 115px;
 
 		.container {
