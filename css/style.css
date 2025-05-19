@@ -140,7 +140,6 @@ p {
 
 .main-page .advantage .card__see-tariff, .mobile-menu .button, #header .tel, #header .button, .modal .close, .modal .submit, .functionality-page .actions .button, .advantages-page .lists .button, .recomendation-page .aditional-info .button, .soft-stream-page .soft-stream .button, .section-demo .button {
   height: 44px;
-  padding: 0 24px;
   font-weight: 500;
   border-radius: 5px;
   background: #BF3524;
@@ -148,11 +147,20 @@ p {
   align-items: center;
   justify-content: center;
 }
+@media (width >= 768px) {
+  .main-page .advantage .card__see-tariff, .mobile-menu .button, #header .tel, #header .button, .modal .close, .modal .submit, .functionality-page .actions .button, .advantages-page .lists .button, .recomendation-page .aditional-info .button, .soft-stream-page .soft-stream .button, .section-demo .button {
+    padding: 0 24px;
+  }
+}
 
 .functionality-page .actions .button, .advantages-page .lists .button, .recomendation-page .aditional-info .button, .soft-stream-page .soft-stream .button, .section-demo .button {
   font-weight: 600;
   height: 56px;
-  padding: 0 32px;
+}
+@media (width >= 768px) {
+  .functionality-page .actions .button, .advantages-page .lists .button, .recomendation-page .aditional-info .button, .soft-stream-page .soft-stream .button, .section-demo .button {
+    padding: 0 32px;
+  }
 }
 @media (width >= 1024px) {
   .functionality-page .actions .button, .advantages-page .lists .button, .recomendation-page .aditional-info .button, .soft-stream-page .soft-stream .button, .section-demo .button {
