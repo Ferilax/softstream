@@ -469,13 +469,14 @@ p {
 
 .modal {
   overflow-y: auto;
+  overflow-x: hidden;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: var(--z-modal);
-  transition: 0.2s;
+  transition: 0.3s;
   align-content: center;
   padding: 0;
   --padding: 24px;
@@ -483,20 +484,23 @@ p {
   opacity: 0;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
-  transform: translateX(40px);
 }
 .modal.show {
   visibility: visible;
   opacity: 1;
+}
+.modal.show .modal__body {
   transform: none;
 }
 .modal__body {
+  transition: inherit;
   max-width: 960px;
   border-radius: 24px;
-  margin: 40px auto;
+  margin-left: auto;
   position: relative;
   background: linear-gradient(135deg, #BB6153, #000000);
   padding: 1px;
+  transform: translateX(100%);
 }
 .modal__content {
   padding: var(--padding);
@@ -522,6 +526,7 @@ p {
 @media (width >= 768px) {
   .modal {
     --padding: 50px;
+    padding: 0;
   }
   .modal__body {
     border-radius: 24px 0 0 24px;
@@ -2269,6 +2274,9 @@ body {
   body.lock {
     overflow: hidden;
   }
+}
+body.modal-opened {
+  overflow: hidden;
 }
 
 main {

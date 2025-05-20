@@ -397,6 +397,7 @@
 
 .modal {
 	overflow-y: auto;
+	overflow-x: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -404,7 +405,7 @@
 	right: 0;
 	z-index: var(--z-modal);
 
-	transition: 0.2s;
+	transition: 0.3s;
 	align-content: center;
 
 	padding: 0;
@@ -415,21 +416,25 @@
 
 	backdrop-filter: blur(10px);
 
-	transform: translateX(40px);
 
 	&.show {
 		visibility: visible;
 		opacity: 1;
-		transform: none;
+
+		.modal__body {
+			transform: none;
+		}
 	}
 
 	&__body {
+		transition: inherit;
 		max-width: 960px;
 		border-radius: 24px;
-		margin: 40px auto;
+		margin-left: auto;
 		position: relative;
 		background: linear-gradient(135deg, #BB6153, #000000);
 		padding: 1px;
+		transform: translateX(100%);
 	}
 
 	&__content {
@@ -455,6 +460,8 @@
 
 	@media (width >=768px) {
 		--padding: 50px;
+
+		padding: 0;
 
 		&__body {
 			border-radius: 24px 0 0 24px;
