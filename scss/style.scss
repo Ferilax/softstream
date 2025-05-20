@@ -28,10 +28,13 @@ body {
 	color: white;
 
 	@media (width < 1024px) {
-
 		&.lock {
 			overflow: hidden;
 		}
+	}
+
+	&.modal-opened {
+		overflow: hidden;
 	}
 }
 
