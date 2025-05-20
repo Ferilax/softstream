@@ -35,13 +35,15 @@ function createModal(modalSelector, triggerSelector) {
 };
 
 createModal("#modal-demo", ".modal-demo-trigger");
-createModal("#modal-submit", ".modal-submit-trigger");
 
 // Скрываем при удачном заполнении формы, для выведения последующей модалки 
 const form = document.querySelector("#modal-demo form");
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", e => {
 	e.preventDefault();
 	closeModal("#modal-demo");
+
+	const modalSubmit = document.querySelector("#modal-submit")
+	showModal(true, modalSubmit);
 
 	const inputs = form.querySelectorAll("input");
 	inputs.forEach(input => {
