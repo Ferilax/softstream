@@ -292,6 +292,10 @@
 			@extend %button-big;
 		}
 
+		.modal-demo-trigger {
+			@extend %button-animation;
+		}
+
 		@media (width < 768px) {
 			.button {
 				padding: 0;
@@ -307,6 +311,7 @@
 		@media (width >=768px) {
 			.buttons {
 				flex-direction: row;
+				align-items: center;
 			}
 		}
 

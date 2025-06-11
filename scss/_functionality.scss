@@ -367,6 +367,10 @@
 			@extend %button-big;
 		}
 
+		.button-animation {
+			@extend %button-animation;
+		}
+
 		@media (width < 768px) {
 			.title {
 				font-size: 18px;

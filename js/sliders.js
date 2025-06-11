@@ -38,8 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	// ---------------------------------------------------------------------------------------------------
 
 	let startSplide = createSwiper("#start-splide", {
-		//padding: "var(--container-padding)",
-		//gap: "var(--container-padding)",
 		perPage: 1,
 		autoHeight: true,
 		pagination: true,

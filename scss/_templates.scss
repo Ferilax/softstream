@@ -28,6 +28,79 @@
 	}
 }
 
+%button-icon {
+	border-radius: 5px;
+	border: 2px solid #FFFFFF80;
+	height: 40px;
+	width: 40px;
+	flex: 0 0 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+%button-animation {
+	height: 62px;
+	padding: 0 24px;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	font-weight: 600;
+
+	width: 100%;
+	transition: 0.3s;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		--border-angle: 0turn;
+		--gradient-border: conic-gradient(from var(--border-angle), transparent 60%, #FFFFFF, transparent);
+
+		background: var(--gradient-border) border-box;
+
+		animation: bg-spin 2.4s linear infinite;
+
+		@keyframes bg-spin {
+			to {
+				--border-angle: 1turn;
+			}
+		}
+
+		clip-path: polygon(0% 0%,
+			0% 100%,
+			2px 100%,
+			2px 2px,
+			calc(100% - 2px) 2px,
+			calc(100% - 2px) calc(100% - 2px),
+			2px calc(100% - 2px),
+			2px 100%,
+			100% 100%,
+			100% 0%);
+	}
+
+	&:hover {
+		background: #FFFFFF33;
+
+		&::after {
+			background: white;
+		}
+	}
+
+	@media (width >=768px) {
+		align-self: start;
+		width: max-content;
+	}
+}
+
 %h1 {
 	font-size: 24px;
 	font-weight: 700;
@@ -107,11 +180,7 @@
 // Общие классы --------------------------------------------------
 
 .arrows {
-	flex-direction: column;
-	gap: 24px;
-
-	align-self: center;
-	margin-bottom: 200px;
+	gap: 16px;
 
 	display: none;
 
@@ -192,6 +261,10 @@
 		@extend %button-big;
 	}
 
+	.modal-demo-trigger {
+		@extend %button-animation;
+	}
+
 	.image {
 		width: 100%;
 		max-width: 570px;
@@ -216,8 +289,9 @@
 			gap: 32px;
 		}
 
-		.button {
-			align-self: start;
+		.buttons {
+			align-items: center;
+			flex-direction: row;
 		}
 	}
 
@@ -235,10 +309,6 @@
 			display: block;
 		}
 
-		.button {
-			align-self: start;
-		}
-
 		.mobile {
 			display: none;
 		}
@@ -254,9 +324,7 @@
 			grid-row: span 3;
 		}
 
-		.buttons {
-			flex-direction: row;
-		}
+
 	}
 
 	@media (width >=1440px) {
@@ -341,8 +409,6 @@
 			flex: 0 1 606px;
 		}
 	}
-
-	@media (width >=1440px) {}
 }
 
 .component_list {

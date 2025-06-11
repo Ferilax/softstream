@@ -43,11 +43,6 @@
 			width: 100%;
 		}
 
-		.flex {
-			display: flex;
-			justify-content: space-between;
-		}
-
 		.title {
 			@extend %h1;
 			max-width: 770px;
@@ -75,6 +70,12 @@
 				background: white;
 				border-radius: 50%;
 			}
+		}
+
+		.arrows {
+			position: absolute;
+			bottom: -23px;
+			left: 90px;
 		}
 
 		// -----------------------------------------------------------
@@ -160,7 +161,6 @@
 	}
 
 	.advantage {
-
 		.head {
 			display: flex;
 			justify-content: space-between;
@@ -170,10 +170,6 @@
 		.title {
 			@extend %h1;
 			color: #FAFAFA33;
-		}
-
-		.arrows {
-			display: none;
 		}
 
 		.card {

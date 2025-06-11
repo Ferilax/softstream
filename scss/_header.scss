@@ -8,6 +8,7 @@
 		height: var(--header-height);
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: 20px;
 	}
 
@@ -55,11 +56,9 @@
 
 	.nav {
 		display: none;
-		gap: 40px;
+		gap: 16px;
 		align-items: center;
 		line-height: 1.1;
-
-		margin-left: auto;
 	}
 
 	.link {
@@ -126,8 +125,8 @@
 
 	.buttons {
 		display: none;
-		gap: 24px;
-		margin-left: auto;
+		align-items: center;
+		gap: 14px;
 	}
 
 	.button {
@@ -139,6 +138,11 @@
 		@extend %button-small;
 		background: transparent;
 		border: 2px solid #FFFFFF80;
+	}
+
+	.social-link {
+		@extend %button-icon;
+		display: none;
 	}
 
 	@media (width >=768px) {
@@ -157,7 +161,16 @@
 		}
 	}
 
+	@media (width >=1200px) {
+		.social-link {
+			display: flex;
+		}
+	}
+
 	@media (width >=1440px) {
+		.social-link {
+			display: none;
+		}
 
 		.nav {
 			display: flex;
@@ -172,9 +185,16 @@
 		}
 	}
 
-	@media (width >=1600px) {
+	@media (width >=1500px) {
 		.nav {
-			margin-left: 100px;
+			gap: 32px;
+
+		}
+	}
+
+	@media (width >=1700px) {
+		.social-link {
+			display: flex;
 		}
 	}
 }
@@ -294,6 +314,17 @@
 		@extend %button-small;
 	}
 
+	.social-links {
+		margin-top: auto;
+		display: flex;
+		gap: 14px;
+		justify-content: center;
+	}
+
+	.social-link {
+		@extend %button-icon;
+	}
+
 	@media (height <=550px) {
 		.container {
 			padding-top: 40px;
@@ -302,6 +333,12 @@
 
 	@media (width >=1024px) {
 		.buttons {
+			display: none;
+		}
+	}
+
+	@media (width >=1200px) {
+		.social-links {
 			display: none;
 		}
 	}
